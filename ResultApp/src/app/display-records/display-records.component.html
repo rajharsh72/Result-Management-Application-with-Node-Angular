@@ -1,0 +1,40 @@
+
+<div class="logoutBtn">
+    <button mat-raised-button color="primary" (click)="openAddRecord()">Add new record</button>
+    &nbsp;&nbsp;
+    <button mat-raised-button color="warn" (click)="logout()">Logout</button>
+    &nbsp;
+</div>
+<div class="alert alert-danger" role="alert" *ngIf="errorMsg" id="alert"> 
+    Error deleting record, Try again!
+  </div>
+<div class="container-fluid">
+    <table class="table table-bordered table-hover table-striped mat-elevation-z8">
+        <thead>
+            <tr>
+                <th scope="col"><h5>Roll No.</h5></th>
+                <th scope="col"><h5>Name</h5></th>
+                <th scope="col"><h5>Date of Birth</h5></th>
+                <th scope="col"><h5>Score</h5></th>
+                <th scope="col"><h5>Actions</h5></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let data of readData">
+                <td>{{data.roll_no}}</td>
+                <td>{{data.name}}</td>
+                <td>{{data.date_of_birth}}</td>
+                <td>{{data.score}}</td>
+                <td>
+                    <button mat-button (click)="editRecord(data)"><i class="bi bi-pencil"></i></button>
+                    &nbsp;&nbsp;
+                    <button mat-button (click)="deleteRecord(data.roll_no)"><i class="bi bi-trash3"></i></button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+<div class="to-top" (click)="scrollToTop()">
+    <i class="bi bi-arrow-up-square-fill"></i>
+</div>

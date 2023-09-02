@@ -1,0 +1,33 @@
+<div mat-dialog-title class="dialogTitle">
+    <h3>Update Student Details</h3>
+</div>
+<div class="alert alert-danger" role="alert" *ngIf="errorMsg"> 
+    Error adding new record, Try again!
+  </div>
+<form [formGroup]="editForm" (ngSubmit)="updateRecord()">
+    <div mat-dialog-content class="content">
+        <div class="row">
+            <mat-form-field appearance="outline">
+                <mat-label>Roll No.</mat-label>
+                <input type="number" matInput placeholder="Roll No." formControlName="roll_no" readonly>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Name</mat-label>
+                <input type="text" matInput placeholder="Name" formControlName="name">
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <mat-form-field appearance="outline">
+                <mat-label>Date of Birth</mat-label>
+                <input type="text" matInput placeholder="YYYY-MM-DD" formControlName="date_of_birth">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Score</mat-label>
+                <input type="number" matInput placeholder="Score" formControlName="score">
+            </mat-form-field>
+        </div>
+    </div>
+    <div mat-dialog-actions class="submitBtn">
+        <button mat-raised-button color="primary" type="submit">Update</button>
+    </div>
+</form>

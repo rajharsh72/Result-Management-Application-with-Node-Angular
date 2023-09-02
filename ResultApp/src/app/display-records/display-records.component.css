@@ -1,0 +1,44 @@
+.container-fluid{
+    margin-top: 80px;
+    margin-bottom: 50px;
+    width: 100%;
+    bottom: 10px;
+}
+.logoutBtn{
+    margin-top: 5px;
+    float:right;
+}
+table{
+    border: black;
+}
+th{
+    background:navy;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    color: azure;
+}
+td,tbody{
+    text-align: center;
+}
+
+#alert{
+    text-align: center;
+}
+
+.to-top{
+    
+    cursor: pointer;
+    position: fixed;
+    bottom:5px;
+    right: 20px;
+    font-size: 30px;
+}
+
+.show-scrolltop {
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+  }
+table{
+    font-family: 'Comic Neue', cursive;
+}
